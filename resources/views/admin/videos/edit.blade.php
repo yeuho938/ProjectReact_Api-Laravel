@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <style> 
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" >
+
+  <style>
     #box{
       width: 500px;
       margin-left: 30%;
@@ -47,14 +49,16 @@
       <input type="datetime-local" id="datetime" name="datetime" value="{{$videos->datetime}}"><br>
       <label for="lname">Category</label>
       <select id="category" name="category">
-       @foreach($categories as $category) 
+       @foreach($categories as $category)
        <option value="{{$category->id}}"> {{$category->name}}</option>
        @endforeach
-     </select> 
+     </select>
      <button type="submit">
       Thêm
-    </button> 
+    </button>
   </form>
 </div>
+@include('partials/danhmuc')
+
 </body>
 </html>

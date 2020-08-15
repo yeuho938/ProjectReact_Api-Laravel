@@ -16,14 +16,21 @@ class NewController extends Controller
 	function index(){
 		$news = News::all();
 		return json_encode($news);
-	}
+    }
+    function getnew(){
+        $videos = News::orderBy('datetime', 'desc')->get();
+        return json_encode($videos);
+        }
 	function indexadmin(){
 		$new = News::all();
 		return view('admin.news.index',['news'=>$new]);
 	}
 	  function detail($id){
-        $newdetail = DB::table('news')->where("id",$id)->get();
-        return json_encode($newdetail);
+        $newdetail = DB::table('news')->where("id",$id)->first();
+        $cate= NewCategory::find($newdetail->category_id);
+        $newdetail->category_name = $cate->name;
+         //echo  json_encode($newdetail, JSON_PRETTY_PRINT);
+       return json_encode($newdetail);
 	}
 	function store(Request $request)
 	{
@@ -66,7 +73,7 @@ class NewController extends Controller
 		return redirect('/admin/new');
 
 	}
-	 function destroy($id){   
+	 function destroy($id){
 		$new = News::find($id);
 		$new->delete();
 		return redirect('/admin/new');

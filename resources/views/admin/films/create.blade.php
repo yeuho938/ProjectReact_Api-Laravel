@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" >
+
 <head>
-  <style> 
+  <style>
     #box{
       width: 500px;
       margin-left: 30%;
@@ -50,14 +52,15 @@
       <input type="text" id="status" name="status">
       <label for="lname">Category</label>
       <select id="category" name="category">
-       @foreach($categories as $category) 
+       @foreach($categories as $category)
        <option value="{{$category->id}}"> {{$category->name}}</option>
        @endforeach
-     </select> 
+     </select>
      <button type="submit">
       Thêm
-    </button> 
+    </button>
   </form>
 </div>
+@include('partials/danhmuc')
 </body>
 </html>

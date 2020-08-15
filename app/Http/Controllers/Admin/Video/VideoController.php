@@ -16,14 +16,21 @@ class VideoController extends Controller
 	function index(){
 		$video = Video::all();
 		return json_encode($video);
+    }
+    function FirstVideo(){
+        $video = Video::take(1)->first();
+		return json_encode($video);
 	}
 	function indexadmin(){
 		$video = Video::all();
 		return view('admin.videos.index',['videos'=>$video]);
 	}
 	function detail($id){
-        $videodetail = DB::table('videos')->where("id",$id)->get();
-        return json_encode($videodetail);
+        $videodetail = DB::table('videos')->where("id",$id)->first();
+        $cate= VideoCategory::find($videodetail->category_id);
+        $videodetail->category_name = $cate->name;
+         //echo  json_encode($newdetail, JSON_PRETTY_PRINT);
+       return json_encode($videodetail);
   }
 	function store(Request $request)
 	{
@@ -67,10 +74,15 @@ class VideoController extends Controller
 		return redirect('/admin/video');
 
 	}
-	public function destroy($id){   
+	 function destroy($id){
 		$video = Video::find($id);
 		$video->delete();
 		return redirect('/admin/video');
-
-	}
+    }
+    function getnew(){
+    $videos = Video::orderBy('datetime', 'desc')->take(6)->get();
+    $category = VideoCategory::all();
+    // echo "<pre>" . json_encode($videos, JSON_PRETTY_PRINT). "</pre>";
+    return json_encode($videos);
+    }
 }

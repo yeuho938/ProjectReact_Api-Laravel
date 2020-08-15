@@ -12,77 +12,77 @@ class NewSeeder extends Seeder
      * @return void
      */
     public function run(Faker $faker)
-    {  
+    {
     	for($i = 0; $i < 3; $i++){
     		DB::table('news')->insert([
-    			'name'=>$faker->name,
+    			'name'=>$faker->sentence(20),
     			'image'=>"public/sukien1.3.jpg",
     			'category_id'=>1,
-    			'content'=>$faker->sentence(300),
+    			'content'=>$faker->sentence(600),
     			'datetime'=>$faker->date("Y-m-d H:i:s"),
     		]);
     	}
         for($i = 0; $i < 3; $i++){
             DB::table('news')->insert([
-                'name'=>$faker->name,
+                'name'=>$faker->sentence(20),
                 'image'=>"public/sukien1.4.jpg",
                 'category_id'=>2,
-                'content'=>$faker->sentence(300),
+                'content'=>$faker->sentence(700),
                 'datetime'=>$faker->date("Y-m-d H:i:s"),
             ]);
         }
         for($i = 0; $i < 3; $i++){
             DB::table('news')->insert([
-                'name'=>$faker->name,
+                'name'=>$faker->sentence(15),
                 'image'=>"public/sukien1.6.jpg",
                 'category_id'=>3,
-                'content'=>$faker->sentence(400),
+                'content'=>$faker->sentence(650),
                 'datetime'=>$faker->date("Y-m-d H:i:s"),
             ]);
         }
         for($i = 0; $i < 3; $i++){
             DB::table('news')->insert([
-                'name'=>$faker->name,
+                'name'=>$faker->sentence(10),
                 'image'=>"public/sukien1.9.jpg",
                 'category_id'=>4,
-                'content'=>$faker->sentence(500),
+                'content'=>$faker->sentence(700),
                 'datetime'=>$faker->date("Y-m-d H:i:s"),
             ]);
         }
         for($i = 0; $i < 3; $i++){
             DB::table('news')->insert([
-                'name'=>$faker->name,
+                'name'=>$faker->sentence(15),
                 'image'=>"public/yangzi5.jpg",
                 'category_id'=>4,
-                'content'=>$faker->sentence(300),
+                'content'=>$faker->sentence(700),
                 'datetime'=>$faker->date("Y-m-d H:i:s"),
             ]);
         }
         for($i = 0; $i < 3; $i++){
             DB::table('news')->insert([
-                'name'=>$faker->name,
+                'name'=>$faker->sentence(15),
                 'image'=>"public/yangzi6.jpg",
                 'category_id'=>2,
-                'content'=>$faker->sentence(400),
+                'content'=>$faker->sentence(900),
                 'datetime'=>$faker->date("Y-m-d H:i:s"),
             ]);
         }
 
         for($i = 0; $i < 3; $i++){
             DB::table('news')->insert([
-                'name'=>$faker->name,
+                'name'=>$faker->sentence(15),
                 'image'=>"public/yangzi8.jpg",
                 'category_id'=>3,
-                'content'=>$faker->sentence(400),
+                'content'=>$faker->sentence(900),
                 'datetime'=>$faker->date("Y-m-d H:i:s"),
             ]);
         }
         for($i = 0; $i < 3; $i++){
             DB::table('news')->insert([
-                'name'=>$faker->name,
+                'name'=>$faker->sentence(15),
                 'image'=>"public/yangzi7.jpg",
                 'category_id'=>1,
-                'content'=>$faker->sentence(330),
+                'content'=>$faker->sentence(830),
                 'datetime'=>$faker->date("Y-m-d H:i:s"),
             ]);
         }

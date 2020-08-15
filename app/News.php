@@ -6,7 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class News extends Model
 {
-    public function category(){
+    public function Category(){
     	return $this->belongsTo("App\NewCategory","category_id","id");
+    }
+    public function comment(){
+    	return $this->belongsTo("App\NewComment","id","new_id");
+
     }
 }

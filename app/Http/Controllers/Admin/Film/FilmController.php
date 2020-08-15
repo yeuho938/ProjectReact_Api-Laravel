@@ -24,13 +24,23 @@ class FilmController extends Controller
     echo count($films);
   }
     function detail($id){
-        $filmdetail = DB::table('films')->where("id",$id)->get();
-        return json_encode($filmdetail);
+        $filmdetail = DB::table('films')->where("id",$id)->first();
+        $cate= FilmCategory::find($filmdetail->category_id);
+        $filmdetail->category_name = $cate->name;
+         //echo  json_encode($newdetail, JSON_PRETTY_PRINT);
+       return json_encode($filmdetail);
   }
-// function index(){
-//     $films = Film::all();
-//       return view('admin.films.create',['categories'=>$cate]);
-//   }
+  function search(Request $request)
+{
+ $txt = $request->input('txtSearch');
+ $search = Film::where('name','LIKE','%'.$txt.'%')->get();
+ return json_encode($search);
+}
+
+  function getnew(){
+    $videos = Film::orderBy('datetime', 'desc')->get();
+    return json_encode($videos);
+    }
   function indexs(){
    $films = Film::all();
    return view('admin.films.index',['films'=>$films]);
@@ -85,13 +95,15 @@ function update($id, Request $request){
     return redirect('/admin/film');
 
 }
-public function destroy($id){   
+public function destroy($id){
     $film = Film::find($id);
     $film->delete();
     return redirect('/admin/film');
 
 }
-// function getCategory(Request $request){
-// $cate = FilmCategory::where($request, $id)->first();
-// }
+function getnewFilm(){
+    $films = Film::orderBy('datetime', 'desc')->take(8)->get();
+    // echo "<pre>" . json_encode($videos, JSON_PRETTY_PRINT). "</pre>";
+    return json_encode($films);
+}
 }

@@ -15,16 +15,19 @@ class CategoryImageSeeder extends Seeder
     public function run()
     {
        DB::table('image_categories')->insert([
-    		'name'=>'Cổ trang',
+    		'name'=>'Phim Cổ trang',
     	]);
     	DB::table('image_categories')->insert([
-    		'name'=>'Từ các bộ phim',
+    		'name'=>'Phim hiện đại',
     	]);
     	DB::table('image_categories')->insert([
     		'name'=>'Sự kiện',
     	]);
     	DB::table('image_categories')->insert([
     		'name'=>'Đời thương',
+        ]);
+        DB::table('image_categories')->insert([
+    		'name'=>'Quảng cáo',
     	]);
     }
 }

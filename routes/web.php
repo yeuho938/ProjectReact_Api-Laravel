@@ -30,7 +30,6 @@ Route::patch('/admin/film/{id}', 'Admin\Film\FilmController@update');
 
 // VIDEO
 Route::get('/admin/video/create', 'Admin\Video\VideoController@create');
-Route::get('/admin/video/index', 'Admin\Video\VideoController@index');
 Route::post('/admin/video/store', 'Admin\Video\VideoController@store');
 
 Route::get('/admin/video', 'Admin\Video\VideoController@indexadmin');
@@ -43,7 +42,6 @@ Route::patch('/admin/video/{id}', 'Admin\Video\VideoController@update');
 
 // NEW
 Route::get('/admin/new/create', 'Admin\News\NewController@create');
-Route::get('/admin/new/index', 'Admin\News\NewController@index');
 Route::post('/admin/new/store', 'Admin\News\NewController@store');
 
 Route::get('/admin/new', 'Admin\News\NewController@indexadmin');
@@ -56,9 +54,7 @@ Route::patch('/admin/new/{id}', 'Admin\News\NewController@update');
 
 // IMAGE
 Route::get('/admin/image/create', 'Admin\Image\ImageController@create');
-Route::get('/admin/image/index', 'Admin\Image\ImageController@index');
 Route::post('/admin/image/store', 'Admin\Image\ImageController@store');
-
 Route::get('/admin/image/getItem', 'Admin\Image\ImageController@get4Image');
 
 Route::get('/admin/image', 'Admin\Image\ImageController@indexadmin');

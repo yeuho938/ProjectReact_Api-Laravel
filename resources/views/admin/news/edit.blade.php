@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <style> 
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" >
+
+  <style>
     #box{
       width: 500px;
       margin-left: 30%;
@@ -34,27 +36,29 @@
 <body>
   <div id='box'>
     <center><h2> Sửa các danh sách tin tức</h2></center>
-    <form  method="POST" action="{{'/admin/new/'.$new->id}}" enctype="multipart/form-data">
+    <form  method="POST" action="{{'/admin/new/'.$news->id}}" enctype="multipart/form-data">
        @csrf
        @method("PATCH")
       <label for="fname">Name</label>
-      <input type="text" id="fname" name="name" value="{{$new->name}}">
+      <input type="text" id="fname" name="name" value="{{$news->name}}">
       <label for="lname">Image</label>
-      <input type="file" id="image" name="image"  value="{{$new->image}}">
+      <input type="file" id="image" name="image"  value="{{$news->image}}">
       <label for="lname">Content</label>
-      <input type="text" id="content" name="content"  value="{{$new->content}}">
+      <input type="text" id="content" name="content"  value="{{$news->content}}">
       <label for="lname">DateTime</label>
-      <input type="datetime-local" id="datetime" name="datetime" value="{{$new->datetime}}">
+      <input type="datetime-local" id="datetime" name="datetime" value="{{$news->datetime}}">
       <label for="lname">Category</label>
       <select id="category" name="category">
-       @foreach($categories as $category) 
+       @foreach($categories as $category)
        <option value="{{$category->id}}"> {{$category->name}}</option>
        @endforeach
-     </select> 
+     </select>
      <button type="submit">
       Thêm
-    </button> 
+    </button>
   </form>
 </div>
+@include('partials/danhmuc')
+
 </body>
 </html>

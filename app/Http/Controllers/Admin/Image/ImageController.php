@@ -13,9 +13,19 @@ class ImageController extends Controller
    $cate = ImageCategory::all();
    return view('admin.images.create',['categories'=>$cate]);
  }
+ function getnew(){
+    $videos = Image::orderBy('datetime', 'desc')->get();
+    return json_encode($videos);
+    }
  function index(){
   $images = Image::all();
   return json_encode($images);
+}
+function search(Request $request)
+{
+ $txt = $request->input('txtSearch');
+ $search = Image::where('name',$txt)->get();
+ return json_encode($search);
 }
 function get4Image(){
   $images = DB::table('images')->skip(10)->take(5)->get();
@@ -23,8 +33,11 @@ function get4Image(){
   echo $images;
 }
 function detail($id){
-        $imagedetail = DB::table('images')->where("id",$id)->get();
-        return json_encode($imagedetail);
+    $imagedetail = DB::table('images')->where("id",$id)->first();
+    $cate= ImageCategory::find($imagedetail->category_id);
+    $imagedetail->category_name = $cate->name;
+     //echo  json_encode($newdetail, JSON_PRETTY_PRINT);
+   return json_encode($imagedetail);
   }
 
 function indexadmin(){
@@ -71,7 +84,7 @@ function update($id, Request $request){
   $images->save();
   return redirect('/admin/image');
 }
-public function destroy($id){   
+public function destroy($id){
   $image = Image::find($id);
   $image->delete();
   return redirect('/admin/image');
