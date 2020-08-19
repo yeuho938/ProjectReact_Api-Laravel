@@ -18,11 +18,6 @@ class FilmController extends Controller
       $films = Film::all();
       return json_encode($films);
   }
-  function countItem(){
-    $films = Film::all();
-    return view('admin.dashboard',['film'=>$films]);
-    echo count($films);
-  }
     function detail($id){
         $filmdetail = DB::table('films')->where("id",$id)->first();
         $cate= FilmCategory::find($filmdetail->category_id);

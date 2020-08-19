@@ -14,23 +14,12 @@ class ImageController extends Controller
    return view('admin.images.create',['categories'=>$cate]);
  }
  function getnew(){
-    $videos = Image::orderBy('datetime', 'desc')->get();
+    $videos = Image::orderBy('datetime', 'desc')->take(5)->get();
     return json_encode($videos);
     }
  function index(){
   $images = Image::all();
   return json_encode($images);
-}
-function search(Request $request)
-{
- $txt = $request->input('txtSearch');
- $search = Image::where('name',$txt)->get();
- return json_encode($search);
-}
-function get4Image(){
-  $images = DB::table('images')->skip(10)->take(5)->get();
- // return json_encode($images);
-  echo $images;
 }
 function detail($id){
     $imagedetail = DB::table('images')->where("id",$id)->first();

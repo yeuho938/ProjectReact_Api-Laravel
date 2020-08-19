@@ -80,7 +80,7 @@ class VideoController extends Controller
 		return redirect('/admin/video');
     }
     function getnew(){
-    $videos = Video::orderBy('datetime', 'desc')->take(6)->get();
+    $videos = Video::orderBy('datetime', 'desc')->take(5)->get();
     $category = VideoCategory::all();
     // echo "<pre>" . json_encode($videos, JSON_PRETTY_PRINT). "</pre>";
     return json_encode($videos);

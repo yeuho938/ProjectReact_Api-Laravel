@@ -163,7 +163,6 @@ nav ul,nav li {
 	font-weight: bold;
 }
 .price::after {
-	content: " / month per user";
 	font-weight: normal;
 }
 .package hr {
@@ -227,4 +226,11 @@ nav ul,nav li {
 	top: 6px;
 	text-shadow: 0 0 2px #37c5b6;
 	font-size: 1.4rem;
+}
+.name a{
+   text-decoration: none;
+   color: #212121;
+}
+.nav-text:hover p{
+    display: block;
 }

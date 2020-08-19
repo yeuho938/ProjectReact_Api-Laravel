@@ -41,8 +41,10 @@
       <a href="/admin/new">
        <i class="fas fa-calendar-check"></i>
        <span class="nav-text">
-        News
+           New
+           <p style="display: none;">hhh</p>
       </span>
+
     </a>
 
   </li>
@@ -55,7 +57,7 @@
    </a>
  </li>
  <li>
-  <a href="#">
+  <a href="/user">
     <i class="fas fa-user"></i>
     <span class="nav-text">
      Users
@@ -80,7 +82,7 @@
       Logout
     </span>
   </a>
-</li>  
+</li>
 </ul>
 </nav>
 </div>

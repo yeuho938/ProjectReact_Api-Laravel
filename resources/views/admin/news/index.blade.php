@@ -31,18 +31,28 @@
        height: 960px;
       overflow: scroll;
     }
+    .add a{
+        text-decoration: none;
+        color: black;
+        margin-left: 20%;
+        background-color: burlywood;
+        font-size: 20px;
+    }
   </style>
 </head>
 <body>
+<div class="add" style="margin-bottom: 30px;">
+        <a href="/admin/new/create">Thêm tin tức mới</a>
+    </div>
   <div id='table'>
  <table border="1" style="width: 80%">
   <tr>
     <th>Name</th>
-    <th>Image</th> 
+    <th>Image</th>
     <th>Content</th>
     <th>Category</th>
-    <th>Date_time</th> 
-    <th>Delete</th> 
+    <th>Date_time</th>
+    <th>Delete</th>
     <th>Edit</th>
   </tr>
   @foreach($news as $new)
@@ -54,15 +64,15 @@
     <td>{{$new->datetime}}</td>
     <td>
       <form action='{{"/admin/new/".$new->id}}' method ="POST">
-        @csrf 
-        @method("DELETE")                                                                                                                                        
-        <button type="submit" name ="delete" style="margin-left: 30px; background: #ffcccc; font-size: 17px;"> Delete </button>      
+        @csrf
+        @method("DELETE")
+        <button type="submit" name ="delete" style="margin-left: 30px; background: #ffcccc; font-size: 17px;"> Delete </button>
       </form>
     </td>
     <td>
-      <form action='{{ "/admin/new/".$new->id."/edit"}}' method ="GET">  
-        @csrf           
-        <button type="submit" name ="delete" style="margin-left: 30px; background: #ffcccc; font-size: 17px;"> Edit </button>      
+      <form action='{{ "/admin/new/".$new->id."/edit"}}' method ="GET">
+        @csrf
+        <button type="submit" name ="delete" style="margin-left: 30px; background: #ffcccc; font-size: 17px;"> Edit </button>
       </form>
     </td>
   </tr>

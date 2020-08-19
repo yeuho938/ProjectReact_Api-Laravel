@@ -9,6 +9,10 @@ Route::get('/', function () {
 // ADMIN
 
 Route::get('/admin/dashboard', 'Admin\DashboardController@index');
+Route::get('/user', 'Admin\User\UserController@index');
+Route::delete('/user/{id}', 'Admin\User\UserController@destroy');
+Route::get('/admin/count', 'Admin\DashboardController@countItem');
+
 
 
 // REGISTER

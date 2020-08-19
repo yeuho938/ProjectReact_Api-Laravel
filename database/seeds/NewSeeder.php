@@ -13,15 +13,56 @@ class NewSeeder extends Seeder
      */
     public function run(Faker $faker)
     {
-    	for($i = 0; $i < 3; $i++){
     		DB::table('news')->insert([
     			'name'=>$faker->sentence(20),
     			'image'=>"public/sukien1.3.jpg",
     			'category_id'=>1,
     			'content'=>$faker->sentence(600),
     			'datetime'=>$faker->date("Y-m-d H:i:s"),
+            ]);
+            DB::table('news')->insert([
+    			'name'=>$faker->sentence(20),
+    			'image'=>"public/dongnien10.jpg",
+    			'category_id'=>1,
+    			'content'=>$faker->sentence(600),
+    			'datetime'=>$faker->date("Y-m-d H:i:s"),
+            ]);
+            DB::table('news')->insert([
+    			'name'=>$faker->sentence(20),
+    			'image'=>"public/dongnien7.jpg",
+    			'category_id'=>2,
+    			'content'=>$faker->sentence(600),
+    			'datetime'=>$faker->date("Y-m-d H:i:s"),
+            ]);
+            DB::table('news')->insert([
+    			'name'=>$faker->sentence(20),
+    			'image'=>"public/yangzi.611_B30mkHhl8un_2.jpg",
+    			'category_id'=>3,
+    			'content'=>$faker->sentence(600),
+    			'datetime'=>$faker->date("Y-m-d H:i:s"),
+            ]);
+            DB::table('news')->insert([
+    			'name'=>$faker->sentence(20),
+    			'image'=>"public/yangzi.611_B31pv9YlDSM_2.jpg",
+    			'category_id'=>3,
+    			'content'=>$faker->sentence(600),
+    			'datetime'=>$faker->date("Y-m-d H:i:s"),
+            ]);
+            DB::table('news')->insert([
+    			'name'=>$faker->sentence(20),
+    			'image'=>"public/yangzi.611_B47Z5gEFMLj_3.jpg",
+    			'category_id'=>3,
+    			'content'=>$faker->sentence(600),
+    			'datetime'=>$faker->date("Y-m-d H:i:s"),
+            ]);
+            DB::table('news')->insert([
+    			'name'=>$faker->sentence(20),
+    			'image'=>"public/yangzi.611_B641H35lBrE_1.jpg",
+    			'category_id'=>3,
+    			'content'=>$faker->sentence(600),
+    			'datetime'=>$faker->date("Y-m-d H:i:s"),
     		]);
-    	}
+
         for($i = 0; $i < 3; $i++){
             DB::table('news')->insert([
                 'name'=>$faker->sentence(20),

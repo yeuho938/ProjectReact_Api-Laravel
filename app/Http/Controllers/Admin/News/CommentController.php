@@ -9,8 +9,8 @@ use \Firebase\JWT\JWT;
 
 class CommentController extends Controller
 {
-function index(){
-  $comment = NewComment::all();
+function index($id){
+  $comment = DB::table('new_comments')->where("new_id",$id)->get();
   return json_encode($comment);
 }
 function addComent(Request $request){

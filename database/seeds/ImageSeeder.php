@@ -13,16 +13,44 @@ class ImageSeeder extends Seeder
      */
     public function run(Faker $faker)
     {
-    	for($i = 0; $i < 3; $i++){
+        DB::table('images')->insert([
+            'name'=>$faker->name,
+            'image'=>"public/tenor.gif",
+            'category_id'=>2,
+            'content'=>$faker->sentence(60),
+            'datetime'=>$faker->date("Y-m-d H:i:s"),
+        ]);
+        DB::table('images')->insert([
+            'name'=>$faker->name,
+            'image'=>"public/tenor (1).gif",
+            'category_id'=>2,
+            'content'=>$faker->sentence(60),
+            'datetime'=>$faker->date("Y-m-d H:i:s"),
+        ]);
+        DB::table('images')->insert([
+            'name'=>$faker->name,
+            'image'=>"public/tenor (3).gif",
+            'category_id'=>2,
+            'content'=>$faker->sentence(60),
+            'datetime'=>$faker->date("Y-m-d H:i:s"),
+        ]);
+        DB::table('images')->insert([
+            'name'=>$faker->name,
+            'image'=>"public/tenor (4).gif",
+            'category_id'=>2,
+            'content'=>$faker->sentence(60),
+            'datetime'=>$faker->date("Y-m-d H:i:s"),
+        ]);
+        for($i = 0; $i < 3; $i++){
     		DB::table('images')->insert([
     			'name'=>$faker->name,
-    			'image'=>"public/21.jpg",
+    			'image'=>"public/tenor (5).gif",
     			'category_id'=>2,
     			'content'=>$faker->sentence(60),
     			'datetime'=>$faker->date("Y-m-d H:i:s"),
     		]);
     	}
-        for($i = 0; $i < 5; $i++){
+        for($i = 0; $i < 3; $i++){
             DB::table('images')->insert([
                 'name'=>$faker->sentence(10),
                 'image'=>"public/1.jpg",
@@ -31,7 +59,15 @@ class ImageSeeder extends Seeder
                 'datetime'=>$faker->date("Y-m-d H:i:s"),
             ]);
         }
-        for($i = 0; $i < 5; $i++){
+            DB::table('images')->insert([
+                'name'=>$faker->name,
+                'image'=>"public/tenor (7).jpg",
+                'category_id'=>1,
+                'content'=>$faker->sentence(50),
+                'datetime'=>$faker->date("Y-m-d H:i:s"),
+            ]);
+
+        for($i = 0; $i < 3; $i++){
             DB::table('images')->insert([
                 'name'=>$faker->name,
                 'image'=>"public/quangcao1.jpg",
@@ -148,8 +184,50 @@ class ImageSeeder extends Seeder
         ]);
          DB::table('images')->insert([
             'name'=>$faker->sentence(10),
-            'image'=>"public/quangcao1.jpg",
+            'image'=>"public/tenor (21).gif",
             'category_id'=>5,
+            'content'=>$faker->sentence(50),
+            'datetime'=>$faker->date("Y-m-d H:i:s"),
+        ]);
+        DB::table('images')->insert([
+            'name'=>$faker->sentence(10),
+            'image'=>"public/tenor (20).gif",
+            'category_id'=>2,
+            'content'=>$faker->sentence(50),
+            'datetime'=>$faker->date("Y-m-d H:i:s"),
+        ]);
+        DB::table('images')->insert([
+            'name'=>$faker->sentence(10),
+            'image'=>"public/tenor (19).gif",
+            'category_id'=>2,
+            'content'=>$faker->sentence(50),
+            'datetime'=>$faker->date("Y-m-d H:i:s"),
+        ]);
+        DB::table('images')->insert([
+            'name'=>$faker->sentence(10),
+            'image'=>"public/tenor (23).gif",
+            'category_id'=>2,
+            'content'=>$faker->sentence(50),
+            'datetime'=>$faker->date("Y-m-d H:i:s"),
+        ]);
+        DB::table('images')->insert([
+            'name'=>$faker->sentence(10),
+            'image'=>"public/tenor (26).gif",
+            'category_id'=>2,
+            'content'=>$faker->sentence(50),
+            'datetime'=>$faker->date("Y-m-d H:i:s"),
+        ]);
+        DB::table('images')->insert([
+            'name'=>$faker->sentence(10),
+            'image'=>"public/tenor (24).gif",
+            'category_id'=>2,
+            'content'=>$faker->sentence(50),
+            'datetime'=>$faker->date("Y-m-d H:i:s"),
+        ]);
+        DB::table('images')->insert([
+            'name'=>$faker->sentence(10),
+            'image'=>"public/tenor (25).gif",
+            'category_id'=>2,
             'content'=>$faker->sentence(50),
             'datetime'=>$faker->date("Y-m-d H:i:s"),
         ]);
