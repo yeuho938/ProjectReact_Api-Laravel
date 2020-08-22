@@ -42,6 +42,8 @@
       <input type="text" id="fname" name="name">
       <label for="lname">Video</label><br>
       <input type="file" id="video" name="video"><br>
+      <label for="lname">Image</label><br>
+      <input type="file" id="image" name="image"><br>
       <label for="lname">Link phim</label>
       <input type="text" id="link" name="link">
       <label for="lname">Content</label>

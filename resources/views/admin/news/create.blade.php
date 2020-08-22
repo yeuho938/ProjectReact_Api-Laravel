@@ -36,7 +36,7 @@
 <body>
   <div id='box'>
     <center><h2> Thêm các danh sách tin tức</h2></center>
-    <form  method="POST" action="/api/admin/new/store" enctype="multipart/form-data">
+    <form  method="POST" action="/admin/new/store" enctype="multipart/form-data">
        @csrf
       <label for="fname">Name</label>
       <input type="text" id="fname" name="name">

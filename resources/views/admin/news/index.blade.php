@@ -72,7 +72,7 @@
     <td>
       <form action='{{ "/admin/new/".$new->id."/edit"}}' method ="GET">
         @csrf
-        <button type="submit" name ="delete" style="margin-left: 30px; background: #ffcccc; font-size: 17px;"> Edit </button>
+        <button type="submit"  style="margin-left: 30px; background: #ffcccc; font-size: 17px;"> Edit </button>
       </form>
     </td>
   </tr>

@@ -58,7 +58,7 @@
        @endforeach
      </select>
      <button type="submit">
-      Thêm
+      Cập nhật
     </button>
   </form>
 </div>

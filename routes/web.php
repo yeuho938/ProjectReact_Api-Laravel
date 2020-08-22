@@ -49,7 +49,7 @@ Route::get('/admin/new/create', 'Admin\News\NewController@create');
 Route::post('/admin/new/store', 'Admin\News\NewController@store');
 
 Route::get('/admin/new', 'Admin\News\NewController@indexadmin');
-Route::delete('/admin/new{id}', 'Admin\News\NewController@destroy');
+Route::delete('/admin/new/{id}', 'Admin\News\NewController@destroy');
 Route::get('/admin/new/{id}/edit', 'Admin\News\NewController@edit');
 Route::patch('/admin/new/{id}', 'Admin\News\NewController@update');
 
@@ -62,7 +62,7 @@ Route::post('/admin/image/store', 'Admin\Image\ImageController@store');
 Route::get('/admin/image/getItem', 'Admin\Image\ImageController@get4Image');
 
 Route::get('/admin/image', 'Admin\Image\ImageController@indexadmin');
-Route::delete('/admin/destroy/{id}', 'Admin\Image\ImageController@destroy');
+Route::delete('/admin/image/{id}', 'Admin\Image\ImageController@destroy');
 Route::get('/admin/image/{id}/edit', 'Admin\Image\ImageController@edit');
 Route::patch('/admin/image/{id}', 'Admin\Image\ImageController@update');
 

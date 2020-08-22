@@ -35,7 +35,7 @@
 <body>
   <div id='box'>
     <center><h2> Thêm các danh sách video</h2></center>
-    <form  method="POST" action="/api/admin/video/store" enctype="multipart/form-data">
+    <form  method="POST" action="/admin/video/store" enctype="multipart/form-data">
      @csrf
      <label for="fname">Name</label>
      <input type="text" id="fname" name="name">

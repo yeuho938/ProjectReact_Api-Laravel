@@ -8,7 +8,7 @@
 <div id ='table'>
     <div class="package">
       <div class='name'>
-        <a href="/admin/film">Film>></a>
+        <a href="/admin/film">Bộ phim </a>
       </div>
       <div class='price'>
       <h3>{{count($films)}}</h3>
@@ -26,15 +26,11 @@
           <strong>6</strong>
           lượt comment
         </li>
-        <li>
-          <strong>Unlimited</strong>
-          public playlists
-        </li>
       </ul>
     </div>
     <div class="package">
       <div class='name'>
-      <a href="/admin/image"> Image >></a>
+      <a href="/admin/image"> Hình ảnh </a>
       </div>
       <div class='price'>
       <h3>{{count($images)}}</h3>
@@ -45,22 +41,14 @@
       <hr>
       <ul>
         <li>
-          <strong>{{count($imageComment)}}</strong>
-          lượt comment
-        </li>
-        <li>
           <strong>6</strong>
-          lượt like
-        </li>
-        <li>
-          <strong>Unlimited</strong>
-          public playlists
+          Thêm vào yêu thích
         </li>
       </ul>
     </div>
     <div class="package">
       <div class='name'>
-      <a href="/admin/new">New >></a>
+      <a href="/admin/new">Tin tức </a>
       </div>
       <div class='price'>
       <h3>{{count($news)}}</h3>
@@ -78,14 +66,10 @@
           <strong>6</strong>
           lượt like
         </li>
-        <li>
-          <strong>Unlimited</strong>
-          public playlists
-        </li>
       </ul>
     </div>
     <div class="package brilliant">
-      <div class='name'> <a href="/admin/video">Video >></a></div>
+      <div class='name'> <a href="/admin/video">Video </a></div>
       <div class='price'><h3>{{count($videos)}}</h3></div>
       <div class='trial'>Video các loại</div>
       <hr>
@@ -97,28 +81,18 @@
         <li>
           <strong>444</strong>
           lượt like
-        <li>
-          Team analytics
         </li>
-      </ul>
+        </ul>
     </div>
     <div class="package">
       <div class='name'> <a href="/user">User >></a></div>
       <div class='price'><h3>{{count($users)}}</h3></div>
-      <div class='trial'>Users</div>
+      <div class='trial'> Người dùng</div>
       <hr>
       <ul>
         <li>
           <strong>5</strong>
-          user
-        </li>
-        <li>
-          <strong>3</strong>
-          team playlists
-        </li>
-        <li>
-          <strong>Unlimited</strong>
-          public playlists
+          người dùng đã đăng ký
         </li>
       </ul>
     </div>

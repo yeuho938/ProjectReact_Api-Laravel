@@ -27,8 +27,8 @@
       font-weight:bold;
     }
     video{
-      width: 350px;
-      height: 350px
+      width: 250px;
+      height: 250px
     }
     #table{
       margin-left: 6%;
@@ -49,13 +49,14 @@
         <a href="/admin/film/create">Thêm bộ phim mới</a>
     </div>
   <div id ='table'>
- <table border="1" style="width: 80%">
+ <table border="1" style="width: 90%">
   <tr>
     <th>Name</th>
     <th>Video</th>
     <th>Content</th>
     <th>Link</th>
     <th>Category</th>
+    <th>Image</th>
     <th>Date_time</th>
     <th>Status</th>
     <th>Delete</th>
@@ -68,6 +69,7 @@
     <td>{{$film->content}}</td>
     <td><a href="{{$film->link}}">{{$film->link}}</a></td>
     <td>{{$film->category->name}}</td>
+    <td><img src="{{'/storage/'.$film->image}}" width="150px" height="150px"></td>
     <td>{{$film->datetime}}</td>
     <td>{{$film->status}}</td>
     <td>
@@ -80,7 +82,7 @@
     <td>
       <form action='{{ "/admin/film/".$film->id."/edit"}}' method ="GET">
         @csrf
-        <button type="submit" name ="delete" style="margin-left: 30px; background: #ffcccc; font-size: 17px;"> Edit </button>
+        <button type="submit" style="margin-left: 30px; background: #ffcccc; font-size: 17px;"> Edit </button>
       </form>
     </td>
   </tr>
