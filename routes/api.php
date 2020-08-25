@@ -8,6 +8,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 //FILM
 Route::get('/admin/film/index', 'Admin\Film\FilmController@index');
+
 Route::get('/admin/film/category', 'Admin\Film\CategoryController@getAllCategory');
 Route::get('/film/category/{id}', 'Admin\Film\CategoryController@getId');
 Route::get('/film/detail/{id}', 'Admin\Film\FilmController@detail');

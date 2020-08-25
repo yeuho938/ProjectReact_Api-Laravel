@@ -3,8 +3,8 @@
 <head>
   <title></title>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" >
-  <style type="text/css">
-    table[border="1"] {
+  <style type="text/css">    
+  table[border="1"] {
       border-collapse:collapse;
       font:normal normal 11px Verdana,Arial,Sans-Serif;
       color:#333;

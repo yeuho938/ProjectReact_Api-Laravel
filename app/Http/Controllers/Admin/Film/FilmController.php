@@ -20,6 +20,7 @@ class FilmController extends Controller
   }
     function detail($id){
         $filmdetail = DB::table('films')->where("id",$id)->first();
+
         $cate= FilmCategory::find($filmdetail->category_id);
         $filmdetail->category_name = $cate->name;
          //echo  json_encode($newdetail, JSON_PRETTY_PRINT);
